@@ -5,35 +5,63 @@ public class Score {
 	public static void main(String[] args) {
 		Scanner imput = new Scanner(System.in);
 
-		System.out.print("Comp(completions):");
+		System.out.println("Comp(completions):");
 		double COMP = imput.nextDouble();
 
-		System.out.print("ATT(number of passes attempted):");
+		System.out.println("ATT(number of passes attempted):");
 		double ATT = imput.nextDouble();
-		
+
 		Double a = CompletionPercentage(COMP, ATT);
-		System.out.println("Completion Percentage:"+a);
-		
-		System.out.print("Yards(total):");
+		if (a < 0) {
+			System.out.println("Completion Percentage is: " + 0);
+		}
+		if (a > 2.375) {
+			System.out.println("Completion Percentage is: " + 2.375);
+		} else {
+			System.out.println("Completion Percentage is: " + a);
+		}
+
+		System.out.println("Yards(total):");
 		double Y = imput.nextDouble();
 
 		Double b = YardsPerAttp(Y, ATT);
-		System.out.println("Yards Per Attempt:"+b);
-		
-		System.out.print("TD(collects touchdowns):");
+		if (b < 0) {
+			System.out.println("Yards Per Attempt is: " + 0);
+		}
+		if (b > 2.375) {
+			System.out.println("Yards Per Attempt is: " + 2.375);
+		} else {
+			System.out.println("Yards Per Attempt is: " + b);
+		}
+
+		System.out.println("TD(collects touchdowns):");
 		double TD = imput.nextDouble();
 
 		Double c = TouchPerAttp(TD, ATT);
-		System.out.println("Touchdowns Per Attempt:"+c);
-		
-		System.out.print("INT(interceptions):");
+		if (c < 0) {
+			System.out.println("Touchdowns Per Attempt is: " + 0);
+		}
+		if (c > 2.375) {
+			System.out.println("Touchdowns Per Attempt is: " + 2.375);
+		} else {
+			System.out.println("Touchdowns Per Attempt is: " + c);
+		}
+
+		System.out.println("INT(interceptions):");
 		double INT = imput.nextDouble();
 
 		Double d = IntercePerAttp(INT, ATT);
-		System.out.println("nterceptions Per Attempt:"+d);
+		if (d < 0) {
+			System.out.println("interceptions Per Attempt is: " + 0);
+		}
+		if (d > 2.375) {
+			System.out.println("interceptions Per Attempt is: " + 2.375);
+		} else {
+			System.out.println("interceptions Per Attempt is" + d);
+		}
 
 		Double PR = PasserRating(a, b, c, d);
-		System.out.println("Passer Rating per person is :"+PR);
+		System.out.println("Passer Rating per person is :" + PR);
 
 	}
 
