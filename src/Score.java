@@ -13,10 +13,12 @@ public class Score {
 
 		Double a = CompletionPercentage(COMP, ATT);
 		if (a < 0) {
-			System.out.println("new Completion Percentage is: " + 0);
+			System.out.println("new Completion  Percentage is: " + 0);
+			a = 0.0;
 		}
 		else if (a > 2.375) {
-			System.out.println("new Completion Percentage is: " + 2.375);
+			System.out.println("new Completion  Percentage is: " + 2.375);
+			a = 2.375;
 		} else {
 			System.out.println("Completion Percentage is: " + a);
 		}
@@ -26,10 +28,12 @@ public class Score {
 
 		Double b = YardsPerAttp(Y, ATT);
 		if (b < 0) {
-			System.out.println("new Yards Per Attempt is: " + 0);
+			System.out.println("new Yards  Per Attempt is: " + 0);
+			b =0.0;
 		}
 		else if (b > 2.375) {
-			System.out.println("new Yards Per Attempt is: " + 2.375);
+			System.out.println("new Yards  Per Attempt is: " + 2.375);
+			b =2.375;
 		} else {
 			System.out.println("Yards Per Attempt is: " + b);
 		}
@@ -40,9 +44,11 @@ public class Score {
 		Double c = TouchPerAttp(TD, ATT);
 		if (c < 0) {
 			System.out.println("new Touchdowns Per Attempt is: " + 0);
+			c =0.0;
 		}
 		else if (c > 2.375) {
 			System.out.println("new Touchdowns Per Attempt is: " + 2.375);
+			c = 2.375;
 		} else {
 			System.out.println("Touchdowns Per Attempt is: " + c);
 		}
@@ -53,15 +59,17 @@ public class Score {
 		Double d = IntercePerAttp(INT, ATT);
 		if (d < 0) {
 			System.out.println("new interceptions Per Attempt is: " + 0);
+			d = 0.0;
 		}
 		else if (d > 2.375) {
 			System.out.println("new interceptions Per Attempt is: " + 2.375);
+			 d = 2.375;
 		} else {
 			System.out.println("interceptions Per Attempt is" + d);
 		}
 
 		Double PR = PasserRating(a, b, c, d);
-		System.out.println("Passer Rating per person is :" + PR);
+		System.out.println("Passer Rating is :" + PR);
 
 	}
 
